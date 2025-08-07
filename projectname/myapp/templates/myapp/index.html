@@ -72,8 +72,12 @@
           </h1>
           <h2>Web Devoloper</h2>
           <div class="st-text-block-btn">
-                  <a href="#" class="st-btn st-style1 st-color1">Download CV</a>
-                </div>
+    {% if cv %}
+        <a href="{{ cv.file.url }}" class="st-btn st-style1 st-color1" download>Download CV</a>
+    {% else %}
+        <a href="#" class="st-btn st-style1 st-color1" disabled>Download CV</a>
+    {% endif %}
+</div>  
         </div>
       </div>
     </div>
