@@ -597,7 +597,7 @@ Proficient in Django, REST APIs, JavaScript, HTML, CSS, and database management 
   </section>
   <!-- End Resume Seciton -->
 
-  <!-- Start Portfolio Seciton -->
+  <!-- Start Portfolio Section -->
   <section id="portfolio">
     <div class="st-height-b100 st-height-lg-b80"></div>
     <div class="container">
@@ -609,88 +609,27 @@ Proficient in Django, REST APIs, JavaScript, HTML, CSS, and database management 
     </div>
     <div class="container">
       <div class="row">
-        <div class="col-lg-4 col-md-6 col-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://acustomsong.com/">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="/static/assets/img/portfolio/Screenshot (1).png" alt="portfolio">
-                </div>
-                
-              </a>
+        {% for project in projects %}
+          <div class="col-lg-4 col-md-6 col-6">
+            <div class="st-portfolio-single st-style1 st-lightgallery">
+              <div class="st-portfolio-item">
+                <a href="{{ project.link }}">
+                  <div class="st-portfolio-img st-zoom-in">
+                    <img src="{{ project.image.url }}" alt="{{ project.title }}">
+                  </div>
+                </a>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://m7.digital/">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="/static/assets/img/portfolio/Screenshot (3).png" alt="portfolio">
-                </div>
-                
-                
-              </a>
-            </div>
+        {% empty %}
+          <div class="col-12">
+            <p>No projects available.</p>
           </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://thaagam.org/">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="/static/assets/img/portfolio/Screenshot (4).png " alt="portfolio">
-                </div>
-                
-              </a>
-            </div>
-          </div>
-        </div>
-      
-     
-        <div class="col-lg-4 col-md-6 col-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://m7-studios.com/">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="/static/assets/img/portfolio/Screenshot (8).png" alt="portfolio">
-                </div>
-                
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://imglinks.netlify.app/">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="/static/assets/img/portfolio/Screenshot (9).png" alt="portfolio">
-                </div>
-               
-              </a>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-4 col-md-6 col-6">
-          <div class="st-portfolio-single st-style1 st-lightgallery">
-            <div class="st-portfolio-item">
-              <a href="https://patyminsider.netlify.app/">
-                <div class="st-portfolio-img st-zoom-in">
-                  <img src="/static/assets/img/portfolio/Screenshot (11).png" alt="portfolio">
-                </div>
-               
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-       
+        {% endfor %}
       </div>
     </div>
-     <!-- <div class="st-height-b100 st-height-lg-b80"></div> -->
   </section>
-  <!-- End Portfolio Seciton -->
+  <!-- End Portfolio Section -->
 
   <!-- Start Review Seciton -->
   <!-- <section class="st-dark-bg">
