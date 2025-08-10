@@ -25,7 +25,14 @@ SECRET_KEY = 'django-insecure-nrx_*^qjujdujthz7^%f+0lvuvg5+c6k^e@w-=eq7a2n@x4j7$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['prasanthm.pythonanywhere.com']
+# settings.py
+
+ALLOWED_HOSTS = [
+    'prasanthm.pythonanywhere.com',
+    'localhost',
+    '127.0.0.1',
+]
+
 
 
 
