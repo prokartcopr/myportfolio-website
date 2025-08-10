@@ -29,6 +29,7 @@ ALLOWED_HOSTS = ['prasanthm.pythonanywhere.com']
 
 
 
+
 # Application definition
 
 INSTALLED_APPS = [
