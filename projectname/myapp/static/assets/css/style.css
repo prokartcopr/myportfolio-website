@@ -1326,7 +1326,7 @@ canvas {
 
 @media screen and (max-width: 575px) {
   .st-hero.st-style1 {
-    height: 580px;
+    height: 468px;
   }
   .st-hero.st-style1 .st-hero-text h1 {
     font-size: 5rem !important;
