@@ -25,7 +25,8 @@ SECRET_KEY = 'django-insecure-nrx_*^qjujdujthz7^%f+0lvuvg5+c6k^e@w-=eq7a2n@x4j7$
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['prasanthm.pythonanywhere.com']
+
 
 
 # Application definition
@@ -124,3 +125,11 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'
+
+
+import os
+
+STATIC_URL = '/static/'
+
+# Add this:
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
